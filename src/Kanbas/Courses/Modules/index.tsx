@@ -1,66 +1,58 @@
+import ModulesControls from './ModulesControls'; // Ensure the import is correct
+import LessonControlButtons from './LessonControlButtons'; // Import the LessonControlButtons
+
 export default function Modules() {
     return (
-      <div>
-        {/* Implement Collapse All button, View Progress button, etc. */}
+        <div>
+            <div id="wd-modules-controls" className="text-nowrap mb-3">
+                <ModulesControls />
+            </div>
+            <br />
+            <ul id="wd-modules" className="list-group rounded-0">
+                <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
+                    <div className="wd-title p-3 ps-2 bg-secondary"> Week 1 </div>
+                    <ul className="wd-lessons list-group rounded-0">
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LEARNING OBJECTIVES
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            Introduction to the course
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            Learn what is Web Development
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LESSON 1
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LESSON 2
+                            <LessonControlButtons />
+                        </li>
+                    </ul>
+                </li>
 
-        <div style={{ marginBottom: '10px' }}>
-        <button>Collapse All</button>
-        <button>View Progress</button>
-        <select>
-          <option>Publish All</option>
-        </select>
-        <button> + Module</button>
+                <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
+                    <div className="wd-title p-3 ps-2 bg-secondary"> Week 2 </div>
+                    <ul className="wd-lessons list-group rounded-0">
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LEARNING OBJECTIVES
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LESSON 1
+                            <LessonControlButtons />
+                        </li>
+                        <li className="wd-lesson list-group-item p-3 ps-1 d-flex justify-content-between align-items-center">
+                            LESSON 2
+                            <LessonControlButtons />
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-
-        <ul id="wd-modules">
-          <li className="wd-module">
-            <div className="wd-title">Week 1, Lecture 1 - Course Introduction, Syllabus, Agenda</div>
-            <ul className="wd-lessons">
-              <li className="wd-lesson">
-                <span className="wd-title">LEARNING OBJECTIVES</span>
-                <ul className="wd-content">
-                  <li className="wd-content-item">Introduction to the course</li>
-                  <li className="wd-content-item">Learn what is Web Development</li>
-                </ul> 
-              </li>
-              <li className="wd-lesson">
-                <span className="wd-title">READING</span>
-                <ul className="wd-content">
-                  <li className="wd-content-item">Full Stack Developer - Chatper 1 - Introduction</li>
-                  <li className="wd-content-item">Full Stack Developer - Chatper 2 - Creating User</li>
-                </ul>
-              </li>
-              <li className="wd-lesson">
-                <span className="wd-title">SLIDES</span>
-                <ul className="wd-content">
-                  <li className="wd-content-item">Introduction to Web Development</li>
-                  <li className="wd-content-item">Creating an HTTP server with Node.js</li>
-                  <li className="wd-content-item">Creating a React Application</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li className="wd-module">
-            <div className="wd-title">Week 1, Lecture 2 - Formatting User Interfaces with HTML</div>
-            <ul className="wd-lessons">
-              <li className="wd-lesson">
-                <span className="wd-title">LEARNING OBJECTIVES</span>
-                <ul className="wd-content">
-                  <li className="wd-content-item">Learn how to create user interfaces with HTML</li>
-                  <li className="wd-content-item">Deploy the assignment to Netlify</li>
-                </ul>
-              </li>
-              <li className="wd-lesson">
-                <span className="wd-title">SLIDES</span>
-                <ul className="wd-content">
-                  <li className="wd-content-item">Introduction to HTML and the DOM</li>
-                  <li className="wd-content-item">Formatting Web Content with Headings and</li>
-                  <li className="wd-content-item">Formatting content with Lists and Tables</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-  );}
-  
+    );
+}
